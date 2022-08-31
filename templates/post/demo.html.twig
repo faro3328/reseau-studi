@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mon nombre aléatoire</title>
+	</head>
+	<body>
+		{% if age > 18 %}
+			<p>Vous etes majeur</p>
+		{% else %}
+			<p>Vous etes mineur</p>
+		{% endif %}
+		vous avez
+		{{age}}
+		ans.
+
+		{% set fruits = ["banane", "apple", "cherry"] %}
+		<ul>
+			{% for fruit in fruits %}
+				<li>{{ fruit }}</li>
+			{% endfor %}
+		</ul>
+		{% set numbers = [3, 2, 5, 6, 8, 6, 9, 74, 52, 12 ] %}
+		<strong>{{max(numbers )}}</strong>
+		{% set myTitle = '<h1>Mon super titre</h1>' %}
+		{{myTitle|raw}}
+
+		{{"now"|date("d/m/y")}}
+
+		<u>{{numbers|last}}</u>
+
+		<u>{{numbers|length}}</u>
+	</body>
+</html>
+
+
+{# <pre>
+            {{ dump(fruits) }}
+        </pre> #}
+{# permet de debuger dump #}
