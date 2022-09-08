@@ -15,9 +15,7 @@ class PostController extends AbstractController
     #[Route('/')]
     public function index(): Response
     {
-        return $this->render('post/index.html.twig', [
-            "age" => 17
-        ]);
+        return $this->render('post/index.html.twig');
     }
 
     #[Route('/post/new')]
@@ -34,6 +32,7 @@ class PostController extends AbstractController
         ]);
     }
 }
+
 
 
 ?>
