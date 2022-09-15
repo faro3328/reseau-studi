@@ -72,6 +72,7 @@ class Post
 
     return $this;
   }
+}
 
   /* public function getUser()
     {
@@ -84,4 +85,3 @@ class Post
 
         return $this;
     } */
-}
