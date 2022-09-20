@@ -94,9 +94,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function setPassword(string $password): self
     {
-        dump($password);
         $this->password = $this->passwordHasher->hashPassword($this, $password);
-        dump($this->password);
+
         return $this;
     }
 
@@ -129,3 +128,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 }
+// dump($this->password); 99
+// dump($password); 97
